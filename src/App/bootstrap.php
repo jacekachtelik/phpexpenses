@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . "/../../vendor/autoload.php";
+require __DIR__ . "/../../vendor/autoload.php";
+echo "bootstrap.php<br>";
 
 use Framework\App;
 
-$app = new App();
-
-return $app;
+return new App();

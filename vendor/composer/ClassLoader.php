@@ -456,6 +456,9 @@ class ClassLoader
         }
 
         $file = $this->findFileWithExtension($class, '.php');
+        if (!$file) {
+            $file = $this->findFileWithExtension($class, '.inc');
+        }
 
         // Search for Hack files if we are running on HHVM
         if (false === $file && defined('HHVM_VERSION')) {
