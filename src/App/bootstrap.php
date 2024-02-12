@@ -3,8 +3,12 @@
 declare(strict_types=1);
 
 require __DIR__ . "/../../vendor/autoload.php";
-echo "bootstrap.php<br>";
 
 use Framework\App;
+$app = new App();
 
-return new App();
+$app->add('/');
+
+dd($app);
+
+return $app;

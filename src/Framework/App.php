@@ -17,12 +17,37 @@ namespace Framework;
 class App {
 
     /**
+     * Obiekt routera
+     *
+     * @var Router
+     */
+    private Router $router;
+
+    public function __construct() {
+
+        $this->router = new Router();
+        
+    }
+
+    /**
      * Uruchamia aplikację
      *
      * @return void
      */
     public function run() {
         echo "Application is running";
+    }
+
+    /**
+     * Metoda dodająca ścieżkę do routera
+     *
+     * @param string $path
+     * @return void
+     */
+    public function add(string $path) {
+
+        $this->router->add($path);
+
     }
 
 }
